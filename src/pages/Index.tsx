@@ -203,10 +203,10 @@ const Index = () => {
               </h3>
               <div className="flex flex-wrap items-center justify-center gap-8">
                 <a href="https://code.org" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-105">
-                  <img src={partnerCodeOrg} alt="Code.org" className="h-20 md:h-28 lg:h-32 w-auto min-w-[120px] md:min-w-[160px] lg:min-w-[200px]" />
+                  <img src={partnerCodeOrg} alt="Code.org" className="max-h-24 md:max-h-32 lg:max-h-40 w-auto" />
                 </a>
                 <a href="https://prominds.com" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-105">
-                  <img src={partnerProminds} alt="ProMinds Business Consulting" className="h-20 md:h-28 lg:h-32 w-auto min-w-[120px] md:min-w-[160px] lg:min-w-[200px] bg-white p-4 rounded-lg" />
+                  <img src={partnerProminds} alt="ProMinds Business Consulting" className="max-h-24 md:max-h-32 lg:max-h-40 w-auto bg-white p-4 rounded-lg" />
                 </a>
               </div>
             </div>
