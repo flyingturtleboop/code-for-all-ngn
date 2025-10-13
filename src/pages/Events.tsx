@@ -126,15 +126,9 @@ const Events = () => {
             <div className="grid gap-8">
               {pastEvents.map((event, index) => (
                 <Card key={index} className="border-border hover:border-primary transition-all overflow-hidden">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="relative h-64 md:h-auto">
-                      <img 
-                        src={event.images[0]} 
-                        alt={event.title}
-                        className="absolute inset-0 w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="p-6 flex flex-col justify-center">
+                  {event.category === "Hackathon" ? (
+                    // Hackathon: Full width with images below
+                    <div className="p-6">
                       <CardHeader className="p-0 mb-4">
                         <div className="inline-block mb-2">
                           <span className="text-primary text-sm font-mono border border-primary px-3 py-1 rounded">
@@ -144,40 +138,60 @@ const Events = () => {
                         <CardTitle className="font-mono text-2xl">{event.title}</CardTitle>
                         <CardDescription className="text-base mt-2">{event.description}</CardDescription>
                       </CardHeader>
-                      {event.images.length > 1 && event.category === "Hackathon" && (
-                        <div className="mt-4">
-                          {/* 5-image grid underneath text */}
-                          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                            <img 
-                              src={event.images[0]} 
-                              alt="Weave app screenshot"
-                              className="w-full h-auto rounded border border-border"
-                            />
-                            <img 
-                              src={event.images[1]} 
-                              alt="PebbleMind app screenshot"
-                              className="w-full h-auto rounded border border-border"
-                            />
-                            <img 
-                              src={event.images[2]} 
-                              alt="Meditation app screenshot"
-                              className="w-full h-auto rounded border border-border"
-                            />
-                            <img 
-                              src={event.images[3]} 
-                              alt="Hackathon participants coding"
-                              className="w-full h-auto rounded border border-border"
-                            />
-                            <img 
-                              src={event.images[4]} 
-                              alt="Hackathon team collaboration"
-                              className="w-full h-auto rounded border border-border"
-                            />
-                          </div>
+                      <div className="mt-6">
+                        {/* 5-image grid underneath text */}
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                          <img 
+                            src={event.images[0]} 
+                            alt="Weave app screenshot"
+                            className="w-full h-auto rounded border border-border"
+                          />
+                          <img 
+                            src={event.images[1]} 
+                            alt="PebbleMind app screenshot"
+                            className="w-full h-auto rounded border border-border"
+                          />
+                          <img 
+                            src={event.images[2]} 
+                            alt="Meditation app screenshot"
+                            className="w-full h-auto rounded border border-border"
+                          />
+                          <img 
+                            src={event.images[3]} 
+                            alt="Hackathon participants coding"
+                            className="w-full h-auto rounded border border-border"
+                          />
+                          <img 
+                            src={event.images[4]} 
+                            alt="Hackathon team collaboration"
+                            className="w-full h-auto rounded border border-border"
+                          />
                         </div>
-                      )}
+                      </div>
                     </div>
-                  </div>
+                  ) : (
+                    // Other events: Keep two-column layout with image on left
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div className="relative h-64 md:h-auto">
+                        <img 
+                          src={event.images[0]} 
+                          alt={event.title}
+                          className="absolute inset-0 w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="p-6 flex flex-col justify-center">
+                        <CardHeader className="p-0 mb-4">
+                          <div className="inline-block mb-2">
+                            <span className="text-primary text-sm font-mono border border-primary px-3 py-1 rounded">
+                              {event.category}
+                            </span>
+                          </div>
+                          <CardTitle className="font-mono text-2xl">{event.title}</CardTitle>
+                          <CardDescription className="text-base mt-2">{event.description}</CardDescription>
+                        </CardHeader>
+                      </div>
+                    </div>
+                  )}
                 </Card>
               ))}
             </div>
