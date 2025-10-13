@@ -59,6 +59,33 @@ const Contact = () => {
         </div>
       </section>
 
+      {/* Social CTA Section */}
+      <section className="py-12 bg-primary/5">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto text-center">
+            <Card className="border-primary/20 bg-card">
+              <CardHeader>
+                <CardTitle className="font-mono text-2xl">Follow Us on Instagram</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-6">
+                  Stay updated with our latest events, workshops, and student achievements
+                </p>
+                <Button 
+                  asChild
+                  size="lg" 
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground font-mono w-full sm:w-auto"
+                >
+                  <a href="https://www.instagram.com/codingforachange?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">
+                    Follow @codingforachange
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Form Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">

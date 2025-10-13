@@ -13,6 +13,16 @@ import hackathonPhoto1 from "@/assets/hackathon-photo-1.jpeg";
 import hackathonPhoto2 from "@/assets/hackathon-photo-2.jpeg";
 
 const Events = () => {
+  const upcomingEvents = [
+    {
+      title: "AI Website Development Workshop",
+      date: "November 1, 2024",
+      time: "1:30–3:00 PM",
+      location: "Sharon Folks Library",
+      description: "Learn to build websites using cutting-edge AI tools. Chips and drinks provided. Bring a computer. Open to all ages!",
+    }
+  ];
+
   const pastEvents = [
     {
       title: "Tutoring Sessions",
@@ -44,8 +54,58 @@ const Events = () => {
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <CodeHeading prefix="//">Events</CodeHeading>
             <p className="text-xl text-muted-foreground">
-              Explore our past programs and get involved in future opportunities
+              Join our upcoming events and explore our past programs
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Upcoming Events Section */}
+      <section className="py-20 bg-card/50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto space-y-12">
+            <div className="text-center space-y-4">
+              <h2 className="font-mono text-3xl font-bold">
+                <span className="text-primary">{'{'}</span> Upcoming Events <span className="text-primary">{'}'}</span>
+              </h2>
+              <p className="text-muted-foreground">
+                Don't miss out on our next opportunities
+              </p>
+            </div>
+
+            <div className="grid gap-8">
+              {upcomingEvents.map((event, index) => (
+                <Card key={index} className="border-border hover:border-primary transition-all">
+                  <CardHeader>
+                    <div className="inline-block mb-2">
+                      <span className="text-primary text-sm font-mono border border-primary px-3 py-1 rounded">
+                        Upcoming
+                      </span>
+                    </div>
+                    <CardTitle className="font-mono text-2xl">{event.title}</CardTitle>
+                    <CardDescription className="text-base mt-4 space-y-2">
+                      <div className="flex items-center text-sm">
+                        <span className="font-semibold mr-2">Date:</span> {event.date}
+                      </div>
+                      <div className="flex items-center text-sm">
+                        <span className="font-semibold mr-2">Time:</span> {event.time}
+                      </div>
+                      <div className="flex items-center text-sm">
+                        <span className="font-semibold mr-2">Location:</span> {event.location}
+                      </div>
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground mb-6">{event.description}</p>
+                    <Link to="/contact">
+                      <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-mono">
+                        Learn More / Contact Us
+                      </Button>
+                    </Link>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -86,35 +146,41 @@ const Events = () => {
                       </CardHeader>
                       {event.images.length > 1 && event.category === "Hackathon" && (
                         <div className="mt-4">
-                          {/* 5-image collage: 3 screenshots on top, 2 photos on bottom */}
-                          <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
-                            {/* Top row: 3 website screenshots */}
-                            <img 
-                              src={event.images[0]} 
-                              alt="Weave app screenshot"
-                              className="w-full h-32 md:h-40 object-cover rounded border border-border"
-                            />
-                            <img 
-                              src={event.images[1]} 
-                              alt="PebbleMind app screenshot"
-                              className="w-full h-32 md:h-40 object-cover rounded border border-border"
-                            />
-                            <img 
-                              src={event.images[2]} 
-                              alt="Meditation app screenshot"
-                              className="w-full h-32 md:h-40 object-cover rounded border border-border col-span-2 md:col-span-1"
-                            />
-                            {/* Bottom row: 2 photos */}
-                            <img 
-                              src={event.images[3]} 
-                              alt="Hackathon participants coding"
-                              className="w-full h-32 md:h-40 object-cover rounded border border-border"
-                            />
-                            <img 
-                              src={event.images[4]} 
-                              alt="Hackathon team collaboration"
-                              className="w-full h-32 md:h-40 object-cover rounded border border-border"
-                            />
+                          {/* 5-image collage: Left column 1 large, right column 3+2 grid */}
+                          <div className="grid md:grid-cols-2 gap-2">
+                            {/* Left column: 1 large image */}
+                            <div className="md:col-span-1">
+                              <img 
+                                src={event.images[3]} 
+                                alt="Hackathon participants coding"
+                                className="w-full h-full min-h-[300px] md:min-h-[400px] object-cover rounded border border-border"
+                              />
+                            </div>
+                            {/* Right column: 3+2 grid */}
+                            <div className="md:col-span-1 grid grid-cols-2 gap-2">
+                              {/* Top row: 3 screenshots */}
+                              <img 
+                                src={event.images[0]} 
+                                alt="Weave app screenshot"
+                                className="w-full h-32 md:h-40 object-cover rounded border border-border"
+                              />
+                              <img 
+                                src={event.images[1]} 
+                                alt="PebbleMind app screenshot"
+                                className="w-full h-32 md:h-40 object-cover rounded border border-border"
+                              />
+                              <img 
+                                src={event.images[2]} 
+                                alt="Meditation app screenshot"
+                                className="w-full h-32 md:h-40 object-cover rounded border border-border col-span-2"
+                              />
+                              {/* Bottom row: 2 photos */}
+                              <img 
+                                src={event.images[4]} 
+                                alt="Hackathon team collaboration"
+                                className="w-full h-32 md:h-40 object-cover rounded border border-border col-span-2"
+                              />
+                            </div>
                           </div>
                         </div>
                       )}

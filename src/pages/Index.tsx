@@ -6,8 +6,8 @@ import { ProgramCard } from "@/components/ProgramCard";
 import { Button } from "@/components/ui/button";
 import { Code, BookOpen, Trophy, Users, Target, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
-import partnerCodeOrg from "@/assets/partner-code-org.png";
-import partnerProminds from "@/assets/partner-prominds.png";
+import partnerCodeOrg from "@/assets/partner-new-codeorg.png";
+import partnerProminds from "@/assets/partner-new-prominds.png";
 
 const Index = () => {
   return (
@@ -201,12 +201,12 @@ const Index = () => {
               <h3 className="text-2xl font-mono font-bold text-center">
                 <span className="text-primary">#</span> Our Partners
               </h3>
-              <div className="flex flex-wrap justify-center items-center gap-12">
-                <a href="https://code.org" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
-                  <img src={partnerCodeOrg} alt="Code.org partner logo" className="h-16 w-auto" />
+              <div className="flex flex-wrap items-center justify-center gap-8">
+                <a href="https://code.org" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-105">
+                  <img src={partnerCodeOrg} alt="Code.org" className="h-20 md:h-28 lg:h-32 w-auto min-w-[120px] md:min-w-[160px] lg:min-w-[200px]" />
                 </a>
-                <a href="https://promindsbusinessconsulting.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity bg-white p-4 rounded-lg">
-                  <img src={partnerProminds} alt="ProMinds Business Consulting partner logo" className="h-12 w-auto" />
+                <a href="https://prominds.com" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-105">
+                  <img src={partnerProminds} alt="ProMinds Business Consulting" className="h-20 md:h-28 lg:h-32 w-auto min-w-[120px] md:min-w-[160px] lg:min-w-[200px] bg-white p-4 rounded-lg" />
                 </a>
               </div>
             </div>
