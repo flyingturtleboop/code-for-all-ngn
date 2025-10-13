@@ -205,7 +205,7 @@ const Index = () => {
                 <a href="https://code.org" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-105">
                   <img src={partnerCodeOrg} alt="Code.org" className="max-h-24 md:max-h-32 lg:max-h-40 w-auto" />
                 </a>
-                <a href="https://prominds.com" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-105">
+                <a href="https://prominds.us/index.html" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-105">
                   <img src={partnerProminds} alt="ProMinds Business Consulting" className="max-h-24 md:max-h-32 lg:max-h-40 w-auto bg-white p-4 rounded-lg" />
                 </a>
               </div>
