@@ -1,4 +1,4 @@
-import { Code2, Mail, Github, Linkedin, Twitter } from "lucide-react";
+import { Linkedin, Instagram } from "lucide-react";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,9 +10,9 @@ export const Footer = () => {
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <Code2 className="w-6 h-6 text-primary" />
+              <span className="font-mono font-bold text-2xl text-primary">{'>'}{'<'}</span>
               <span className="font-mono font-bold text-lg">
-                Coding<span className="text-primary">ForChange</span>
+                Coding for a Change
               </span>
             </div>
             <p className="text-sm text-muted-foreground mb-4">
@@ -51,17 +51,11 @@ export const Footer = () => {
             © {currentYear} Coding for a Change. All rights reserved.
           </p>
           <div className="flex space-x-4">
-            <a href="mailto:contact@codingforachange.org" className="text-muted-foreground hover:text-primary transition-colors">
-              <Mail className="w-5 h-5" />
-            </a>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-              <Github className="w-5 h-5" />
-            </a>
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
               <Linkedin className="w-5 h-5" />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-              <Twitter className="w-5 h-5" />
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+              <Instagram className="w-5 h-5" />
             </a>
           </div>
         </div>

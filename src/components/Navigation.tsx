@@ -1,8 +1,7 @@
-import { Code2, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Link, useLocation } from "react-router-dom";
-import logo from "@/assets/logo.png";
 
 export const Navigation = () => {
   const location = useLocation();
@@ -23,9 +22,9 @@ export const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center space-x-3">
-            <img src={logo} alt="Coding for a Change Logo" className="w-10 h-10" />
+            <span className="font-mono font-bold text-2xl text-primary">{'>'}{'<'}</span>
             <span className="font-mono font-bold text-lg">
-              Coding<span className="text-primary">ForChange</span>
+              Coding for a Change
             </span>
           </Link>
 
@@ -44,8 +43,13 @@ export const Navigation = () => {
                 {item.label}
               </Link>
             ))}
-            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-mono">
-              {'{ Donate }'}
+            <Button 
+              asChild
+              className="bg-primary hover:bg-primary/90 text-primary-foreground font-mono"
+            >
+              <a href="http://donate.code.org/CodingForAChange" target="_blank" rel="noopener noreferrer">
+                {'{ Donate }'}
+              </a>
             </Button>
           </div>
 
@@ -71,8 +75,13 @@ export const Navigation = () => {
                     {item.label}
                   </Link>
                 ))}
-                <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-mono mt-4">
-                  {'{ Donate }'}
+                <Button 
+                  asChild
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground font-mono mt-4"
+                >
+                  <a href="http://donate.code.org/CodingForAChange" target="_blank" rel="noopener noreferrer">
+                    {'{ Donate }'}
+                  </a>
                 </Button>
               </div>
             </SheetContent>

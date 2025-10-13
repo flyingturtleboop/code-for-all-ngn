@@ -7,39 +7,51 @@ import { User } from "lucide-react";
 const Team = () => {
   const officers = [
     {
-      name: "Chief Executive Officer",
-      role: "CEO",
-      bio: "Leading our mission to make computer science education accessible to all students through innovative programs and partnerships.",
+      name: "Praneeth S",
+      role: "CEO & CTO",
+      bio: "Leading the organization with vision and strategy while overseeing technical operations and ensuring high-quality educational content delivery.",
       photo: null
     },
     {
-      name: "Chief Operating Officer",
+      name: "Abhinav Mittal",
       role: "COO",
-      bio: "Overseeing daily operations, program logistics, and ensuring seamless delivery of tutoring, workshops, and hackathons.",
+      bio: "Managing day-to-day operations and program execution to maximize impact.",
       photo: null
     },
     {
-      name: "Chief Technology Officer",
-      role: "CTO",
-      bio: "Driving technical strategy, curriculum development, and implementing cutting-edge tools and platforms for student success.",
-      photo: null
-    },
-    {
-      name: "Chief Marketing Officer",
+      name: "Srikar",
       role: "CMO",
-      bio: "Building brand awareness, engaging our community, and expanding our reach to connect with more students and partners.",
+      bio: "Building our brand and reaching more students who can benefit from our programs.",
       photo: null
     },
     {
-      name: "Chief Financial Officer",
+      name: "Alan",
+      role: "Co-Director of Curriculum",
+      bio: "Developing engaging curriculum and learning materials for our programs.",
+      photo: null
+    },
+    {
+      name: "Praneeth K",
+      role: "Co-Director of Curriculum",
+      bio: "Creating innovative educational content to enhance student learning experiences.",
+      photo: null
+    },
+    {
+      name: "Srihith",
+      role: "CIO",
+      bio: "Managing information systems and data-driven decision making.",
+      photo: null
+    },
+    {
+      name: "Arjun",
+      role: "CHRO",
+      bio: "Leading human resources and building a strong volunteer community.",
+      photo: null
+    },
+    {
+      name: "Prahas",
       role: "CFO",
-      bio: "Managing financial operations, fundraising initiatives, and ensuring sustainable growth for long-term impact.",
-      photo: null
-    },
-    {
-      name: "Chief Outreach Officer",
-      role: "Outreach Director",
-      bio: "Establishing partnerships with schools, organizations, and community groups to expand our program reach and impact.",
+      bio: "Ensuring financial sustainability and responsible resource allocation.",
       photo: null
     }
   ];

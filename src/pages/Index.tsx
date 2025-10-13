@@ -34,14 +34,25 @@ const Index = () => {
               Bridging the gap in computer science education through tutoring, workshops, and hackathons
             </p>
             
+            <p className="text-lg text-muted-foreground font-mono">
+              Serving students across Georgia, Illinois, and New Jersey
+            </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link to="/events">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-mono text-lg">
                   {'[ View Events ]'}
                 </Button>
               </Link>
-              <Button size="lg" variant="outline" className="font-mono text-lg border-primary text-primary hover:bg-primary/10">
-                {'{ Get Involved }'}
+              <Button 
+                asChild
+                size="lg" 
+                variant="outline" 
+                className="font-mono text-lg border-primary text-primary hover:bg-primary/10"
+              >
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScN-KPr-OFs7kpsYubGlRpCmKNLjhWtu43rYDnwldQ0MGqzjA/viewform" target="_blank" rel="noopener noreferrer">
+                  {'{ Volunteer With Us }'}
+                </a>
               </Button>
             </div>
             
@@ -122,11 +133,11 @@ const Index = () => {
               
               <ProgramCard
                 icon={<Code className="w-10 h-10" />}
-                title="AI_Workshops"
-                description="Interactive workshops teaching students to build websites and applications using cutting-edge AI tools."
+                title="Workshops"
+                description="We host personal branding workshops, AI workshops, and more."
                 features={[
                   "AI-assisted web development",
-                  "Modern frameworks and tools",
+                  "Personal branding sessions",
                   "Hands-on project creation",
                   "Best practices and deployment"
                 ]}
@@ -160,11 +171,9 @@ const Index = () => {
             </div>
 
             <div className="flex flex-wrap gap-6 justify-center">
-              <StatChip label="Students Taught" value="250+" />
-              <StatChip label="Hours of Tutoring" value="500+" />
-              <StatChip label="Workshops Held" value="12+" />
-              <StatChip label="Hackathon Participants" value="100+" />
-              <StatChip label="Projects Created" value="75+" />
+              <StatChip label="Hours of Tutoring" value="2,250+" />
+              <StatChip label="Hackathon Participants" value="75+" />
+              <StatChip label="Apps Created" value="20+" />
             </div>
 
             <div className="max-w-3xl mx-auto space-y-8">

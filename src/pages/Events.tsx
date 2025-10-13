@@ -5,22 +5,29 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import workshopImage from "@/assets/workshop-presentation.jpeg";
-import tutoringClassroom from "@/assets/tutoring-classroom.jpeg";
 import zoomSession1 from "@/assets/zoom-session-1.jpeg";
+import hackathonImage1 from "@/assets/tutoring-student.jpeg";
+import hackathonImage2 from "@/assets/tutoring-classroom.jpeg";
 
 const Events = () => {
   const pastEvents = [
     {
       title: "Tutoring Sessions",
       description: "Weekly tutoring sessions covering Python fundamentals, web development, and computer science concepts. Students received personalized guidance and hands-on support.",
-      images: [zoomSession1, tutoringClassroom],
+      images: [zoomSession1],
       category: "Tutoring"
     },
     {
-      title: "AI Workshops",
+      title: "Workshops",
       description: "Interactive workshops where students learned to build websites and applications using cutting-edge AI tools. Participants created real projects and deployed them live.",
       images: [workshopImage],
       category: "Workshop"
+    },
+    {
+      title: "Hackathon",
+      description: "24-hour collaborative coding events where students built innovative projects, competed for prizes, and connected with peers passionate about technology.",
+      images: [hackathonImage1, hackathonImage2],
+      category: "Hackathon"
     }
   ];
 
@@ -74,14 +81,14 @@ const Events = () => {
                         <CardTitle className="font-mono text-2xl">{event.title}</CardTitle>
                         <CardDescription className="text-base mt-2">{event.description}</CardDescription>
                       </CardHeader>
-                      {event.images.length > 1 && (
-                        <div className="flex gap-2 mt-4">
-                          {event.images.slice(1).map((img, idx) => (
+                      {event.images.length > 1 && event.category === "Hackathon" && (
+                        <div className="grid grid-cols-2 gap-2 mt-4">
+                          {event.images.map((img, idx) => (
                             <img 
                               key={idx}
                               src={img} 
-                              alt={`${event.title} ${idx + 2}`}
-                              className="w-24 h-24 object-cover rounded border border-border"
+                              alt={`${event.title} ${idx + 1}`}
+                              className="w-full h-32 object-cover rounded border border-border"
                             />
                           ))}
                         </div>
@@ -110,14 +117,20 @@ const Events = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-mono">
+              <Button 
+                asChild
+                size="lg" 
+                className="bg-primary hover:bg-primary/90 text-primary-foreground font-mono"
+              >
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScN-KPr-OFs7kpsYubGlRpCmKNLjhWtu43rYDnwldQ0MGqzjA/viewform" target="_blank" rel="noopener noreferrer">
                   Volunteer With Us
+                </a>
+              </Button>
+              <Link to="/contact">
+                <Button size="lg" variant="outline" className="font-mono border-primary text-primary hover:bg-primary/10">
+                  Become a Partner
                 </Button>
               </Link>
-              <Button size="lg" variant="outline" className="font-mono border-primary text-primary hover:bg-primary/10">
-                Become a Partner
-              </Button>
             </div>
 
             <div className="pt-8 border-t border-border mt-12">

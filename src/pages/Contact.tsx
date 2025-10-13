@@ -18,15 +18,29 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      message: formData.get('message')
+    };
+    
+    // Create mailto link
+    const subject = encodeURIComponent(`Contact Form: ${data.name}`);
+    const body = encodeURIComponent(`From: ${data.name} (${data.email})\n\nMessage:\n${data.message}`);
+    const mailtoLink = `mailto:praneeths14209@gmail.com?subject=${subject}&body=${body}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+    
     setTimeout(() => {
       toast({
-        title: "Message Sent!",
-        description: "We'll get back to you as soon as possible.",
+        title: "Opening Email Client",
+        description: "Your message is ready to send via your email client.",
       });
       setIsSubmitting(false);
       (e.target as HTMLFormElement).reset();
-    }, 1000);
+    }, 500);
   };
 
   return (
@@ -60,10 +74,10 @@ const Contact = () => {
                 </CardHeader>
                 <CardContent>
                   <a 
-                    href="mailto:info@codingforachangenpo.com" 
+                    href="mailto:praneeths14209@gmail.com" 
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    info@codingforachangenpo.com
+                    praneeths14209@gmail.com
                   </a>
                 </CardContent>
               </Card>
@@ -77,7 +91,7 @@ const Contact = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    Serving students across Georgia and Texas
+                    Serving students across Georgia, Illinois, and New Jersey
                   </p>
                 </CardContent>
               </Card>
