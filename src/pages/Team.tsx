@@ -2,6 +2,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { CodeHeading } from "@/components/CodeHeading";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { User } from "lucide-react";
 import praneethSPhoto from "@/assets/team-praneeth-s.png";
 import abhinavPhoto from "@/assets/team-abhinav.png";
@@ -91,17 +92,19 @@ const Team = () => {
                   className="border-border hover:border-primary transition-all hover:shadow-[0_0_20px_rgba(59,130,246,0.2)]"
                 >
                   <CardHeader>
-                    <div className="w-full aspect-square bg-card/50 rounded-lg mb-4 flex items-center justify-center border border-border">
-                      {officer.photo ? (
-                        <img 
-                          src={officer.photo} 
-                          alt={officer.name}
-                          className="w-full h-full object-cover rounded-lg"
-                        />
-                      ) : (
-                        <User className="w-24 h-24 text-muted-foreground" />
-                      )}
-                    </div>
+                    <AspectRatio ratio={1} className="mb-4">
+                      <div className="w-full h-full bg-card/50 rounded-lg flex items-center justify-center border border-border overflow-hidden">
+                        {officer.photo ? (
+                          <img 
+                            src={officer.photo} 
+                            alt={officer.name}
+                            className="w-full h-full object-cover"
+                          />
+                        ) : (
+                          <User className="w-24 h-24 text-muted-foreground" />
+                        )}
+                      </div>
+                    </AspectRatio>
                     <CardTitle className="font-mono text-xl">{officer.name}</CardTitle>
                     <CardDescription className="font-mono text-primary">{officer.role}</CardDescription>
                   </CardHeader>
