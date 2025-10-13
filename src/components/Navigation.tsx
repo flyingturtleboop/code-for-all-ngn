@@ -21,10 +21,12 @@ export const Navigation = () => {
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center space-x-3">
-            <span className="font-mono font-bold text-2xl text-primary">{'>'}{'<'}</span>
+          <Link to="/" className="flex items-center">
             <span className="font-mono font-bold text-lg">
-              Coding for a Change
+              {'</>'}
+              {' '}
+              <span className="text-primary">Coding</span>
+              {' for a Change'}
             </span>
           </Link>
 

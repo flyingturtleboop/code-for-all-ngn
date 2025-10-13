@@ -9,10 +9,12 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <span className="font-mono font-bold text-2xl text-primary">{'>'}{'<'}</span>
+            <div className="flex items-center mb-4">
               <span className="font-mono font-bold text-lg">
-                Coding for a Change
+                {'</>'}
+                {' '}
+                <span className="text-primary">Coding</span>
+                {' for a Change'}
               </span>
             </div>
             <p className="text-sm text-muted-foreground mb-4">
@@ -51,10 +53,10 @@ export const Footer = () => {
             © {currentYear} Coding for a Change. All rights reserved.
           </p>
           <div className="flex space-x-4">
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="https://www.linkedin.com/company/codingforachange/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
               <Linkedin className="w-5 h-5" />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="https://www.instagram.com/codingforachange/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
               <Instagram className="w-5 h-5" />
             </a>
           </div>

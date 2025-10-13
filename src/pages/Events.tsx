@@ -6,8 +6,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Link } from "react-router-dom";
 import workshopImage from "@/assets/workshop-presentation.jpeg";
 import zoomSession1 from "@/assets/zoom-session-1.jpeg";
-import hackathonImage1 from "@/assets/tutoring-student.jpeg";
-import hackathonImage2 from "@/assets/tutoring-classroom.jpeg";
+import hackathonWeave from "@/assets/hackathon-weave.png";
+import hackathonPebblemind from "@/assets/hackathon-pebblemind.jpg";
+import hackathonMeditation from "@/assets/hackathon-meditation.png";
+import hackathonPhoto1 from "@/assets/hackathon-photo-1.jpeg";
+import hackathonPhoto2 from "@/assets/hackathon-photo-2.jpeg";
 
 const Events = () => {
   const pastEvents = [
@@ -26,7 +29,7 @@ const Events = () => {
     {
       title: "Hackathon",
       description: "24-hour collaborative coding events where students built innovative projects, competed for prizes, and connected with peers passionate about technology.",
-      images: [hackathonImage1, hackathonImage2],
+      images: [hackathonWeave, hackathonPebblemind, hackathonMeditation, hackathonPhoto1, hackathonPhoto2],
       category: "Hackathon"
     }
   ];
@@ -82,15 +85,37 @@ const Events = () => {
                         <CardDescription className="text-base mt-2">{event.description}</CardDescription>
                       </CardHeader>
                       {event.images.length > 1 && event.category === "Hackathon" && (
-                        <div className="grid grid-cols-2 gap-2 mt-4">
-                          {event.images.map((img, idx) => (
+                        <div className="mt-4">
+                          {/* 5-image collage: 3 screenshots on top, 2 photos on bottom */}
+                          <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+                            {/* Top row: 3 website screenshots */}
                             <img 
-                              key={idx}
-                              src={img} 
-                              alt={`${event.title} ${idx + 1}`}
-                              className="w-full h-32 object-cover rounded border border-border"
+                              src={event.images[0]} 
+                              alt="Weave app screenshot"
+                              className="w-full h-32 md:h-40 object-cover rounded border border-border"
                             />
-                          ))}
+                            <img 
+                              src={event.images[1]} 
+                              alt="PebbleMind app screenshot"
+                              className="w-full h-32 md:h-40 object-cover rounded border border-border"
+                            />
+                            <img 
+                              src={event.images[2]} 
+                              alt="Meditation app screenshot"
+                              className="w-full h-32 md:h-40 object-cover rounded border border-border col-span-2 md:col-span-1"
+                            />
+                            {/* Bottom row: 2 photos */}
+                            <img 
+                              src={event.images[3]} 
+                              alt="Hackathon participants coding"
+                              className="w-full h-32 md:h-40 object-cover rounded border border-border"
+                            />
+                            <img 
+                              src={event.images[4]} 
+                              alt="Hackathon team collaboration"
+                              className="w-full h-32 md:h-40 object-cover rounded border border-border"
+                            />
+                          </div>
                         </div>
                       )}
                     </div>

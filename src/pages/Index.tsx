@@ -6,6 +6,8 @@ import { ProgramCard } from "@/components/ProgramCard";
 import { Button } from "@/components/ui/button";
 import { Code, BookOpen, Trophy, Users, Target, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
+import partnerCodeOrg from "@/assets/partner-code-org.png";
+import partnerProminds from "@/assets/partner-prominds.png";
 
 const Index = () => {
   return (
@@ -199,22 +201,12 @@ const Index = () => {
               <h3 className="text-2xl font-mono font-bold text-center">
                 <span className="text-primary">#</span> Our Partners
               </h3>
-              <div className="flex flex-wrap items-center justify-center gap-12">
-                <a 
-                  href="https://code.org" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-primary transition-colors font-mono text-lg"
-                >
-                  Code.org
+              <div className="flex flex-wrap justify-center items-center gap-12">
+                <a href="https://code.org" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+                  <img src={partnerCodeOrg} alt="Code.org partner logo" className="h-16 w-auto" />
                 </a>
-                <a 
-                  href="https://prominds.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-primary transition-colors font-mono text-lg"
-                >
-                  ProMinds Business Consulting
+                <a href="https://promindsbusinessconsulting.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity bg-white p-4 rounded-lg">
+                  <img src={partnerProminds} alt="ProMinds Business Consulting partner logo" className="h-12 w-auto" />
                 </a>
               </div>
             </div>
