@@ -8,49 +8,49 @@ const Team = () => {
   const officers = [
     {
       name: "Praneeth S",
-      role: "CEO & CTO",
+      role: "Chief Executive Officer & Chief Technology Officer",
       bio: "Leading the organization with vision and strategy while overseeing technical operations and ensuring high-quality educational content delivery.",
       photo: null
     },
     {
       name: "Abhinav Mittal",
-      role: "COO",
+      role: "Chief Operating Officer",
       bio: "Managing day-to-day operations and program execution to maximize impact.",
       photo: null
     },
     {
       name: "Srikar",
-      role: "CMO",
+      role: "Chief Marketing Officer",
       bio: "Building our brand and reaching more students who can benefit from our programs.",
       photo: null
     },
     {
       name: "Alan",
-      role: "Co-Director of Curriculum",
+      role: "Chief Product Officer",
       bio: "Developing engaging curriculum and learning materials for our programs.",
       photo: null
     },
     {
       name: "Praneeth K",
-      role: "Co-Director of Curriculum",
+      role: "Chief Learning Officer",
       bio: "Creating innovative educational content to enhance student learning experiences.",
       photo: null
     },
     {
       name: "Srihith",
-      role: "CIO",
+      role: "Chief Information Officer",
       bio: "Managing information systems and data-driven decision making.",
       photo: null
     },
     {
       name: "Arjun",
-      role: "CHRO",
+      role: "Chief Human Resources Officer",
       bio: "Leading human resources and building a strong volunteer community.",
       photo: null
     },
     {
       name: "Prahas",
-      role: "CFO",
+      role: "Chief Financial Officer",
       bio: "Ensuring financial sustainability and responsible resource allocation.",
       photo: null
     }
