@@ -3,6 +3,14 @@ import { Footer } from "@/components/Footer";
 import { CodeHeading } from "@/components/CodeHeading";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { User } from "lucide-react";
+import praneethSPhoto from "@/assets/team-praneeth-s.png";
+import abhinavPhoto from "@/assets/team-abhinav.png";
+import srikarPhoto from "@/assets/team-srikar.png";
+import alanPhoto from "@/assets/team-alan.png";
+import praneethKPhoto from "@/assets/team-praneeth-k.heic";
+import srihithPhoto from "@/assets/team-srihith.png";
+import arjunPhoto from "@/assets/team-arjun.png";
+import prahasPhoto from "@/assets/team-prahas.png";
 
 const Team = () => {
   const officers = [
@@ -10,49 +18,49 @@ const Team = () => {
       name: "Praneeth S",
       role: "Chief Executive Officer & Chief Technology Officer",
       bio: "Leading the organization with vision and strategy while overseeing technical operations and ensuring high-quality educational content delivery.",
-      photo: null
+      photo: praneethSPhoto
     },
     {
       name: "Abhinav Mittal",
       role: "Chief Operating Officer",
       bio: "Managing day-to-day operations and program execution to maximize impact.",
-      photo: null
+      photo: abhinavPhoto
     },
     {
       name: "Srikar",
       role: "Chief Marketing Officer",
       bio: "Building our brand and reaching more students who can benefit from our programs.",
-      photo: null
+      photo: srikarPhoto
     },
     {
       name: "Alan",
       role: "Chief Product Officer",
       bio: "Developing engaging curriculum and learning materials for our programs.",
-      photo: null
+      photo: alanPhoto
     },
     {
       name: "Praneeth K",
       role: "Chief Learning Officer",
       bio: "Creating innovative educational content to enhance student learning experiences.",
-      photo: null
+      photo: praneethKPhoto
     },
     {
       name: "Srihith",
       role: "Chief Information Officer",
       bio: "Managing information systems and data-driven decision making.",
-      photo: null
+      photo: srihithPhoto
     },
     {
       name: "Arjun",
       role: "Chief Human Resources Officer",
       bio: "Leading human resources and building a strong volunteer community.",
-      photo: null
+      photo: arjunPhoto
     },
     {
       name: "Prahas",
       role: "Chief Financial Officer",
       bio: "Ensuring financial sustainability and responsible resource allocation.",
-      photo: null
+      photo: prahasPhoto
     }
   ];
 
