@@ -38,7 +38,7 @@ const Events = () => {
     },
     {
       title: "Hackathon",
-      description: "24-hour collaborative coding events where students built innovative projects, competed for prizes, and connected with peers passionate about technology.",
+      description: "24-hour Online Hackathon: Collaborative coding event where students built innovative projects, competed for $100, and connected with peers passionate about technology.",
       images: [hackathonWeave, hackathonPebblemind, hackathonMeditation, hackathonPhoto1, hackathonPhoto2],
       category: "Hackathon"
     }

@@ -60,8 +60,8 @@ const Index = () => {
             
             <div className="flex flex-wrap gap-4 justify-center pt-8">
               <StatChip label="Students Reached" value="250+" />
-              <StatChip label="States" value="2" />
-              <StatChip label="Programs" value="3" />
+              <StatChip label="States" value="3" />
+              <StatChip label="Programs" value="8" />
               <StatChip label="Workshops" value="12+" />
             </div>
           </div>

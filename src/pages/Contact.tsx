@@ -9,6 +9,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, MapPin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -18,29 +19,32 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    const formData = new FormData(e.currentTarget);
-    const data = {
-      name: formData.get('name'),
-      email: formData.get('email'),
-      message: formData.get('message')
-    };
-    
-    // Create mailto link
-    const subject = encodeURIComponent(`Contact Form: ${data.name}`);
-    const body = encodeURIComponent(`From: ${data.name} (${data.email})\n\nMessage:\n${data.message}`);
-    const mailtoLink = `mailto:praneeths14209@gmail.com?subject=${subject}&body=${body}`;
-    
-    // Open email client
-    window.location.href = mailtoLink;
-    
-    setTimeout(() => {
+    try {
+      // Send email using EmailJS
+      await emailjs.sendForm(
+        'service_kot2uej',      // Replace with your EmailJS Service ID
+        'template_aeiqy0p',     // Replace with your EmailJS Template ID
+        e.currentTarget,
+        'jZ_KvzwvGOQ915HWP'       // Replace with your EmailJS Public Key
+      );
+      
       toast({
-        title: "Opening Email Client",
-        description: "Your message is ready to send via your email client.",
+        title: "Message Sent!",
+        description: "Thank you for contacting us. We'll get back to you as soon as possible.",
       });
-      setIsSubmitting(false);
+      
+      // Reset form
       (e.target as HTMLFormElement).reset();
-    }, 500);
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try emailing us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (

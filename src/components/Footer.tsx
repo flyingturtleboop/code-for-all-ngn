@@ -27,22 +27,16 @@ export const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-mono font-semibold mb-4 text-primary">Quick Links</h3>
-            <ul className="space-y-2 text-sm">
-              <li><a href="#about" className="text-muted-foreground hover:text-primary transition-colors">About</a></li>
-              <li><a href="#programs" className="text-muted-foreground hover:text-primary transition-colors">Programs</a></li>
-              <li><a href="#impact" className="text-muted-foreground hover:text-primary transition-colors">Impact</a></li>
-              <li><a href="#events" className="text-muted-foreground hover:text-primary transition-colors">Events</a></li>
-            </ul>
+            
           </div>
 
           {/* Get Involved */}
           <div>
-            <h3 className="font-mono font-semibold mb-4 text-primary">Get Involved</h3>
+            <h3 className="font-mono font-semibold mb-4 text-primary">Learn More</h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="#get-involved" className="text-muted-foreground hover:text-primary transition-colors">Volunteer</a></li>
-              <li><a href="#get-involved" className="text-muted-foreground hover:text-primary transition-colors">Donate</a></li>
-              <li><a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</a></li>
+              <li><a href="#about" className="text-muted-foreground hover:text-primary transition-colors">About</a></li>
+              <li><a href="#programs" className="text-muted-foreground hover:text-primary transition-colors">Programs</a></li>
+              <li><a href="#impact" className="text-muted-foreground hover:text-primary transition-colors">Impact</a></li>
             </ul>
           </div>
         </div>
