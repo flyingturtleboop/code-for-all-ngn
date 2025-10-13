@@ -1,41 +1,48 @@
 import { Code2, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Link, useLocation } from "react-router-dom";
+import logo from "@/assets/logo.png";
 
 export const Navigation = () => {
+  const location = useLocation();
+  
   const navItems = [
-    { label: "About", href: "#about" },
-    { label: "Programs", href: "#programs" },
-    { label: "Impact", href: "#impact" },
-    { label: "Events", href: "#events" },
-    { label: "Get Involved", href: "#get-involved" },
-    { label: "Contact", href: "#contact" },
+    { label: "Home", href: "/" },
+    { label: "Events", href: "/events" },
+    { label: "Team", href: "/team" },
+    { label: "Contact", href: "/contact" },
   ];
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    element?.scrollIntoView({ behavior: "smooth" });
+  const isActive = (href: string) => {
+    return location.pathname === href;
   };
 
   return (
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center space-x-2">
-            <Code2 className="w-6 h-6 text-primary" />
-            <span className="font-mono font-bold text-lg">Coding<span className="text-primary">ForChange</span></span>
-          </div>
+          <Link to="/" className="flex items-center space-x-3">
+            <img src={logo} alt="Coding for a Change Logo" className="w-10 h-10" />
+            <span className="font-mono font-bold text-lg">
+              Coding<span className="text-primary">ForChange</span>
+            </span>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
-              <button
+              <Link
                 key={item.label}
-                onClick={() => scrollToSection(item.href)}
-                className="text-sm text-muted-foreground hover:text-primary transition-colors font-mono"
+                to={item.href}
+                className={`text-sm transition-colors font-mono ${
+                  isActive(item.href)
+                    ? "text-primary font-bold"
+                    : "text-muted-foreground hover:text-primary"
+                }`}
               >
                 {item.label}
-              </button>
+              </Link>
             ))}
             <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-mono">
               {'{ Donate }'}
@@ -52,13 +59,17 @@ export const Navigation = () => {
             <SheetContent side="right" className="w-[300px]">
               <div className="flex flex-col space-y-4 mt-8">
                 {navItems.map((item) => (
-                  <button
+                  <Link
                     key={item.label}
-                    onClick={() => scrollToSection(item.href)}
-                    className="text-left text-lg text-muted-foreground hover:text-primary transition-colors font-mono"
+                    to={item.href}
+                    className={`text-left text-lg transition-colors font-mono ${
+                      isActive(item.href)
+                        ? "text-primary font-bold"
+                        : "text-muted-foreground hover:text-primary"
+                    }`}
                   >
                     {item.label}
-                  </button>
+                  </Link>
                 ))}
                 <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-mono mt-4">
                   {'{ Donate }'}
