@@ -7,7 +7,7 @@ import praneethSPhoto from "@/assets/team-praneeth-s.png";
 import abhinavPhoto from "@/assets/team-abhinav.png";
 import srikarPhoto from "@/assets/team-srikar.png";
 import alanPhoto from "@/assets/team-alan.png";
-import praneethKPhoto from "@/assets/team-praneeth-k.heic";
+import praneethKPhoto from "@/assets/team-praneeth-k.png";
 import srihithPhoto from "@/assets/team-srihith.png";
 import arjunPhoto from "@/assets/team-arjun.png";
 import prahasPhoto from "@/assets/team-prahas.png";
