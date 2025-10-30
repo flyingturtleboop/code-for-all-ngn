@@ -2,66 +2,57 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { CodeHeading } from "@/components/CodeHeading";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { User } from "lucide-react";
-import praneethSPhoto from "@/assets/team-praneeth-s.png";
-import abhinavPhoto from "@/assets/team-abhinav.png";
-import srikarPhoto from "@/assets/team-srikar.png";
-import alanPhoto from "@/assets/team-alan.png";
-import praneethKPhoto from "@/assets/team-praneeth-k.png";
-import srihithPhoto from "@/assets/team-srihith.png";
-import arjunPhoto from "@/assets/team-arjun.png";
-import prahasPhoto from "@/assets/team-prahas.png";
 
 const Team = () => {
   const officers = [
     {
       name: "Praneeth S",
-      role: "Chief Executive Officer & Chief Technology Officer",
+      role: "CEO & CTO",
       bio: "Leading the organization with vision and strategy while overseeing technical operations and ensuring high-quality educational content delivery.",
-      photo: praneethSPhoto
+      photo: null
     },
     {
       name: "Abhinav Mittal",
-      role: "Chief Operating Officer",
+      role: "COO",
       bio: "Managing day-to-day operations and program execution to maximize impact.",
-      photo: abhinavPhoto
+      photo: null
     },
     {
       name: "Srikar",
-      role: "Chief Marketing Officer",
+      role: "CMO",
       bio: "Building our brand and reaching more students who can benefit from our programs.",
-      photo: srikarPhoto
+      photo: null
     },
     {
       name: "Alan",
-      role: "Chief Product Officer",
+      role: "Co-Director of Curriculum",
       bio: "Developing engaging curriculum and learning materials for our programs.",
-      photo: alanPhoto
+      photo: null
     },
     {
       name: "Praneeth K",
-      role: "Chief Learning Officer",
+      role: "Co-Director of Curriculum",
       bio: "Creating innovative educational content to enhance student learning experiences.",
-      photo: praneethKPhoto
+      photo: null
     },
     {
       name: "Srihith",
-      role: "Chief Information Officer",
+      role: "CIO",
       bio: "Managing information systems and data-driven decision making.",
-      photo: srihithPhoto
+      photo: null
     },
     {
       name: "Arjun",
-      role: "Chief Human Resources Officer",
+      role: "CHRO",
       bio: "Leading human resources and building a strong volunteer community.",
-      photo: arjunPhoto
+      photo: null
     },
     {
       name: "Prahas",
-      role: "Chief Financial Officer",
+      role: "CFO",
       bio: "Ensuring financial sustainability and responsible resource allocation.",
-      photo: prahasPhoto
+      photo: null
     }
   ];
 
@@ -92,19 +83,17 @@ const Team = () => {
                   className="border-border hover:border-primary transition-all hover:shadow-[0_0_20px_rgba(59,130,246,0.2)]"
                 >
                   <CardHeader>
-                    <AspectRatio ratio={1} className="mb-4">
-                      <div className="w-full h-full bg-card/50 rounded-lg flex items-center justify-center border border-border overflow-hidden">
-                        {officer.photo ? (
-                          <img 
-                            src={officer.photo} 
-                            alt={officer.name}
-                            className="w-full h-full object-cover"
-                          />
-                        ) : (
-                          <User className="w-24 h-24 text-muted-foreground" />
-                        )}
-                      </div>
-                    </AspectRatio>
+                    <div className="w-full aspect-square bg-card/50 rounded-lg mb-4 flex items-center justify-center border border-border">
+                      {officer.photo ? (
+                        <img 
+                          src={officer.photo} 
+                          alt={officer.name}
+                          className="w-full h-full object-cover rounded-lg"
+                        />
+                      ) : (
+                        <User className="w-24 h-24 text-muted-foreground" />
+                      )}
+                    </div>
                     <CardTitle className="font-mono text-xl">{officer.name}</CardTitle>
                     <CardDescription className="font-mono text-primary">{officer.role}</CardDescription>
                   </CardHeader>
