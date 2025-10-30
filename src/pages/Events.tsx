@@ -16,7 +16,7 @@ const Events = () => {
   const upcomingEvents = [
     {
       title: "AI Website Development Workshop",
-      date: "November 1, 2025",
+      date: "November 1, 2024",
       time: "1:30–3:00 PM",
       location: "Sharon Folks Library",
       description: "Learn to build websites using cutting-edge AI tools. Chips and drinks provided. Bring a computer. Open to all ages!",
@@ -32,7 +32,7 @@ const Events = () => {
     },
     {
       title: "Workshops",
-      description: "Interactive workshops where students learn industry skills and build websites, apps, and more! Participants created real projects and deployed them live.",
+      description: "Interactive workshops where students learned to learn industry skills and build websites, apps, more! Participants created real projects and deployed them live.",
       images: [workshopImage],
       category: "Workshop"
     },
