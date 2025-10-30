@@ -3,6 +3,14 @@ import { Footer } from "@/components/Footer";
 import { CodeHeading } from "@/components/CodeHeading";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { User } from "lucide-react";
+import teamPraneethS from "@/assets/team-praneeth-s.png";
+import teamAbhinav from "@/assets/team-abhinav.png";
+import teamSrikar from "@/assets/team-srikar.png";
+import teamAlan from "@/assets/team-alan.png";
+import teamPraneethK from "@/assets/team-praneeth-k.png";
+import teamSrihith from "@/assets/team-srihith.png";
+import teamArjun from "@/assets/team-arjun.png";
+import teamPrahas from "@/assets/team-prahas.png";
 
 const Team = () => {
   const officers = [
@@ -10,49 +18,49 @@ const Team = () => {
       name: "Praneeth S",
       role: "CEO & CTO",
       bio: "Leading the organization with vision and strategy while overseeing technical operations and ensuring high-quality educational content delivery.",
-      photo: null
+      photo: teamPraneethS
     },
     {
       name: "Abhinav Mittal",
       role: "COO",
       bio: "Managing day-to-day operations and program execution to maximize impact.",
-      photo: null
+      photo: teamAbhinav
     },
     {
       name: "Srikar",
       role: "CMO",
       bio: "Building our brand and reaching more students who can benefit from our programs.",
-      photo: null
+      photo: teamSrikar
     },
     {
       name: "Alan",
       role: "Co-Director of Curriculum",
       bio: "Developing engaging curriculum and learning materials for our programs.",
-      photo: null
+      photo: teamAlan
     },
     {
       name: "Praneeth K",
       role: "Co-Director of Curriculum",
       bio: "Creating innovative educational content to enhance student learning experiences.",
-      photo: null
+      photo: teamPraneethK
     },
     {
       name: "Srihith",
       role: "CIO",
       bio: "Managing information systems and data-driven decision making.",
-      photo: null
+      photo: teamSrihith
     },
     {
       name: "Arjun",
       role: "CHRO",
       bio: "Leading human resources and building a strong volunteer community.",
-      photo: null
+      photo: teamArjun
     },
     {
       name: "Prahas",
       role: "CFO",
       bio: "Ensuring financial sustainability and responsible resource allocation.",
-      photo: null
+      photo: teamPrahas
     }
   ];
 
@@ -83,12 +91,12 @@ const Team = () => {
                   className="border-border hover:border-primary transition-all hover:shadow-[0_0_20px_rgba(59,130,246,0.2)]"
                 >
                   <CardHeader>
-                    <div className="w-full aspect-square bg-card/50 rounded-lg mb-4 flex items-center justify-center border border-border">
+                    <div className="w-full aspect-square bg-card/50 rounded-lg mb-4 flex items-center justify-center border border-border overflow-hidden">
                       {officer.photo ? (
                         <img 
                           src={officer.photo} 
                           alt={officer.name}
-                          className="w-full h-full object-cover rounded-lg"
+                          className="w-full h-full object-cover"
                         />
                       ) : (
                         <User className="w-24 h-24 text-muted-foreground" />
