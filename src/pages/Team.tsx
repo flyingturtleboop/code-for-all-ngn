@@ -3,7 +3,7 @@ import { Footer } from "@/components/Footer";
 import { CodeHeading } from "@/components/CodeHeading";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { User } from "lucide-react";
-import teamPraneethS from "@/assets/team-praneeth-s.png";
+import teamPraneethS from "@/assets/team-praneeth-s.jpeg";
 import teamAbhinav from "@/assets/team-abhinav.png";
 import teamSrikar from "@/assets/team-srikar.png";
 import teamAlan from "@/assets/team-alan.png";
