@@ -13,7 +13,7 @@ export const ProgramCard = ({ icon, title, description, features }: ProgramCardP
     <Card className="border-border hover:border-primary transition-all hover:shadow-[0_0_20px_rgba(255,106,0,0.2)]">
       <CardHeader>
         <div className="mb-4 text-primary">{icon}</div>
-        <CardTitle className="font-mono text-xl">{`function ${title}()`}</CardTitle>
+        <CardTitle className="font-mono text-xl">{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
       <CardContent>

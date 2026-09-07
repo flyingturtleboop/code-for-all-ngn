@@ -16,8 +16,8 @@ const Team = () => {
   const officers = [
     {
       name: "Praneeth S",
-      role: "CEO & CTO",
-      bio: "Leading the organization with vision and strategy while overseeing technical operations and ensuring high-quality educational content delivery.",
+      role: "CEO & Owner",
+      bio: "Georgia Tech CS and Math student overseeing nonprofit operations, partnerships, and curriculum strategy to expand computing education access.",
       photo: teamPraneethS
     },
     {
